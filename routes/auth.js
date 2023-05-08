@@ -21,7 +21,6 @@ router.post("/login", async (req, res) => {
         res.status(200).json({ response: chatEngineResponse.data });
     } catch (error) {
         console.error("error", error);
-        alert("username or password incorrect!");
         res.status(500).json({ error: error.message });
     }
   });
@@ -44,7 +43,6 @@ router.post("/signup", async (req, res) => {
         res.status(200).json({ response: chatEngineResponse.data });
     } catch(error) {
         console.log("error", error.message);
-        alert("username already existing");
         res.status(500).json({ error: error.message });
     }
 });
